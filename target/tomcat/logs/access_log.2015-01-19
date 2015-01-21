@@ -1,0 +1,5 @@
+127.0.0.1 - - [19/Jan/2015:15:05:42 +0800] "GET /yxtel_server/json/product/login HTTP/1.1" 200 48 http-bio-8087-exec-1 158
+127.0.0.1 - - [19/Jan/2015:15:05:42 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8087-exec-2 0
+127.0.0.1 - - [19/Jan/2015:15:05:42 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8087-exec-3 0
+127.0.0.1 - - [19/Jan/2015:15:05:42 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8087-exec-4 0
+127.0.0.1 - - [19/Jan/2015:15:06:03 +0800] "GET /yxtel_server/json/product/login/1111/1231 HTTP/1.1" 200 48 http-bio-8087-exec-5 7

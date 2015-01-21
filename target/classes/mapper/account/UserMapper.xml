@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.com.yxtel.bean.account.UserBean">
+    <cache />
+    <resultMap type="User" id="resultListUser">
+        <id column="id" property="id" />
+        <result column="userName" property="userName"/>
+        <result column="password" property="password" />
+    </resultMap>
+
+    <select id="getUserList" parameterType="pd" resultType="pd">
+        select u.username FROM yx_user
+    </select>
+</mapper>

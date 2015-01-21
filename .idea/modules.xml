@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../yxtel_account_lib/yxtel_account_lib.iml" filepath="$PROJECT_DIR$/../yxtel_account_lib/yxtel_account_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yxtel_account_web/yxtel_account_web.iml" filepath="$PROJECT_DIR$/../yxtel_account_web/yxtel_account_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yxtel_sdk_lib/yxtel_sdk_lib.iml" filepath="$PROJECT_DIR$/../yxtel_sdk_lib/yxtel_sdk_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yxtel_server.iml" filepath="$PROJECT_DIR$/yxtel_server.iml" />
+    </modules>
+  </component>
+</project>

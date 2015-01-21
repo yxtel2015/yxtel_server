@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <property name="CONTEXT_NAME" value="yxtel_service"/>
+    <property name="LOG_HOME" value="${catalina.home}/logs"/>
+    <contextName>${CONTEXT_NAME}</contextName>
+
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
+
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %-4relative [%thread] %-5level %logger{30} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="apiAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${CONTEXT_NAME}/api.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${LOG_HOME}/${CONTEXT_NAME}/%d{yyyy-MM-dd/yyyy-MM-dd-HH}-%i.log
+            </fileNamePattern>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxFileSize>5MB</MaxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%contextName][%thread] %-5level %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="consoleAppender" />
+        <appender-ref ref="apiAppender"/>
+    </root>
+
+</configuration>

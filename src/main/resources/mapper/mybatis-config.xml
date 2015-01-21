@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mapper.org//DTD SQL Map Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<settings> 
+        <setting name="cacheEnabled" value="false" /> 
+        <setting name="useGeneratedKeys" value="true" /> 
+        <setting name="defaultExecutorType" value="REUSE" /> 
+    </settings>
+
+	<typeAliases>
+		<!--<typeAlias type="cn.com.yxtel.entity.system.User" alias="User"/>-->
+		<!--<typeAlias type="cn.com.yxtel.entity.system.Role" alias="Role"/>-->
+		<!--<typeAlias type="cn.com.yxtel.entity.system.Menu" alias="Menu"/>-->
+		<typeAlias type="cn.com.yxtel.bean.account.UserBean" alias="User"/>
+
+		<!--<typeAlias type="yxtel.util.PageData" alias="pd"/>-->
+		
+		
+		<!-- 分页 -->
+		<!--<typeAlias type="cn.com.yxtel.entity.Page" alias="Page"/>-->
+	</typeAliases>
+	
+	<!--<plugins>-->
+		<!--<plugin interceptor="cn.com.yxtel.plugin.PagePlugin">-->
+			<!--<property name="dialect" value="mysql"/>-->
+			<!--<property name="pageSqlId" value=".*listPage.*"/>-->
+		<!--</plugin>-->
+	<!--</plugins>-->
+	
+	<mappers>
+	
+		<!-- 系统模块    开始 -->
+		<!-- 系统用户 -->
+		<!--<mapper resource="mapper/system/UserMapper.xml"/>
+		&lt;!&ndash; 系统角色 &ndash;&gt;
+		<mapper resource="mapper/system/RoleMapper.xml"/>
+		&lt;!&ndash; 系统菜单 &ndash;&gt;
+		<mapper resource="mapper/system/MenuMapper.xml"/>
+		&lt;!&ndash; 新用户处理 &ndash;&gt;
+		<mapper resource="mapper/system/UserXMapper.xml"/>
+		&lt;!&ndash; app用户 &ndash;&gt;
+		<mapper resource="mapper/system/AppuserMapper.xml"/>
+		&lt;!&ndash; 数据字典 &ndash;&gt;
+		<mapper resource="mapper/system/ZidianMapper.xml"/>-->
+		<!-- 系统模块    结束 -->
+		<!--<mapper resource="mapper/account/UserMapper.xml"/>-->
+	</mappers>
+	
+</configuration>

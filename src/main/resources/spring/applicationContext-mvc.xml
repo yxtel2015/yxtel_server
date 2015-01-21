@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+
+	<context:component-scan base-package="cn.com.yxtel" />
+
+	<mvc:annotation-driven/>
+
+	<!--<context:component-scan base-package="com.json" />-->
+	<!--  <mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**/*.do*"/>
+			<bean class="com.fh.interceptor.LoginHandlerInterceptor"/>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/**/*.do*"/>
+			<bean class="com.fh.interceptor.RightsHandlerInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	  -->
+	  
+  	<!--<mvc:interceptors>-->
+		<!--<mvc:interceptor>-->
+			<!--<mvc:mapping path="/**/*.do*"/>-->
+			<!--<bean class="com.fh.interceptor.LoginHandlerInterceptor"/>-->
+		<!--</mvc:interceptor>-->
+	<!--</mvc:interceptors>-->
+	 
+	<!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+		<!--<property name="prefix" value="/jsp/"/>-->
+		<!--<property name="suffix" value=".jsp"/>-->
+	<!--</bean>-->
+	
+	<bean id="exceptionResolver" class="cn.com.yxtel.util.exception.MyExceptionResolver"></bean>
+	<!--&lt;!&ndash; 上传拦截，如最大上传值及最小上传值 &ndash;&gt;
+	  <bean id="multipartResolver"   class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >   
+		  <property name="maxUploadSize">    
+	          <value>104857600</value>    
+	       </property>   
+	        <property name="maxInMemorySize">    
+	            <value>4096</value>    
+	        </property>   
+	         <property name="defaultEncoding">    
+	            <value>utf-8</value>    
+	        </property> 
+    </bean>  -->
+
+	<import resource="classpath:springmvc-resteasy.xml" />
+
+	<import resource="classpath:spring-hessian.xml" />
+</beans>
